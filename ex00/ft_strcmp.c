@@ -12,37 +12,35 @@
 
 #include <stdio.h>
 
-int get_str_size(char *str)
+int	get_str_size(char *str)
 {
-    int size;
+	int	size;
 
-    size = 0; 
-    while(str[size] != 0)
-    {
-        size++;
-    }
-    return size;
+	size = 0;
+	while (str[size] != 0)
+	{
+		size++;
+	}
+	return (size);
 }
 
-int ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char *s1, char *s2)
 {
-    int result;
-    int size1;
-    int size2;
-    int i;
+	int	result;
+	int	size1;
+	int	size2;
+	int	i;
 
-    size1 = get_str_size(s1);
-    size2 = get_str_size(s2);
-
-    i = 0;
-    result = 0;
-    while (i <= size1)
-    {
-        // printf("adsa");
-        result = s1[i] - s2[i];
-        if (result !=0 || i > size2)
-            break;
-        i++;
-    }
-    return (result);
+	size1 = get_str_size(s1);
+	size2 = get_str_size(s2);
+	i = 0;
+	result = 0;
+	while (i <= size1)
+	{
+		result = s1[i] - s2[i];
+		if (result != 0 || i > size2)
+			break ;
+		i++;
+	}
+	return (result);
 }
